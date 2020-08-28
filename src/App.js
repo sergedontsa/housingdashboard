@@ -74,7 +74,7 @@ function ResponsiveDrawer(props) {
   return (
       <div className={classes.root}>
         <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position="fixed" className={classes.appBar} elevation={0}>
           <Toolbar>
             <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} className={classes.menuButton}>
               <MenuIcon />

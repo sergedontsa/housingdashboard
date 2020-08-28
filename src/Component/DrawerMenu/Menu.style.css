@@ -1,10 +1,6 @@
-.list-item-content {
-  display: flex;
-  flex-direction: row;
-}
-
 .option {
   text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=Menu.style.css.map */

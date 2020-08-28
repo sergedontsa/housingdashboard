@@ -12,7 +12,8 @@ import SubscriberPage from "../../Page/Subscriber/SubscriberPage";
 import TenantPage from "../../Page/Tenant/TenantPage";
 
 class Content extends Component {
-    render() {
+
+   render() {
         return (
             <div>
                 <Switch>
