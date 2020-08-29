@@ -12,6 +12,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Content from "./Component/Content/Content";
 import Menu from "./Component/DrawerMenu/Menu";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import UserMenu from "./Component/NavBar/UserMenu";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+import {Badge} from "@material-ui/core";
 
 
 const drawerWidth = 240;
@@ -19,6 +24,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -30,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-      backgroundColor:'#232f3e',
+      backgroundColor:'#CCD2D4',
       boxShadow:0,
+      color: 'black'
     },
   },
   menuButton: {
@@ -46,9 +53,17 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   content: {
-    flexGrow: 0,
-    padding: theme.spacing(1),
+    flexGrow: 1,
+    padding: theme.spacing(2),
+
   },
+  typographyStyles:{
+    flex:1,
+  },
+  iconStyle:{
+    marginRight: theme.spacing(4),
+    cursor:'pointer'
+  }
 }));
 
 function ResponsiveDrawer(props) {
@@ -56,6 +71,14 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) =>{
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -79,7 +102,21 @@ function ResponsiveDrawer(props) {
             <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} className={classes.menuButton}>
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap> Housing Authority</Typography>
+            <Typography variant="h6" noWrap className={classes.typographyStyles}> Housing Authority</Typography>
+
+
+            <Badge badgeContent={4} color={'secondary'}>
+                <NotificationsActiveIcon className={classes.iconStyle}/>
+            </Badge>
+
+
+                <MailOutlineIcon className={classes.iconStyle}/>
+
+
+            <Badge>
+                <AccountCircleIcon className={classes.iconStyle}  onClick={handleClick}/>
+            </Badge>
+            <UserMenu anchorEl={anchorEl} handleClose={handleClose}/>
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer} aria-label="mailbox folders">
@@ -96,9 +133,9 @@ function ResponsiveDrawer(props) {
         </nav>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Typography paragraph component={'div'}>
+
                 <Content/>
-          </Typography>
+
         </main>
       </div>
   );

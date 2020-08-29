@@ -10,12 +10,13 @@ import ListeningPage from "../../Page/Listening/ListeningPage";
 import SchedulePage from "../../Page/Schedule/SchedulePage";
 import SubscriberPage from "../../Page/Subscriber/SubscriberPage";
 import TenantPage from "../../Page/Tenant/TenantPage";
+import MyAccountPage from "../../Page/MyAccount/MyAccountPage";
 
 class Content extends Component {
 
    render() {
         return (
-            <div>
+
                 <Switch>
                     <Route exact={true} path={'/apartment'} component={ApartmentPage}/>
                     <Route exact={true} path={'/billing'} component={BillingPage}/>
@@ -26,8 +27,9 @@ class Content extends Component {
                     <Route exact={true} path={'/subscriber'} component={SubscriberPage}/>
                     <Route exact={true} path={'/tenant'} component={TenantPage}/>
                     <Route exact={true} path={'/building'} component={BuildingPage}/>
+                    <Route exact={true} path={'/account'} component={MyAccountPage}/>
                 </Switch>
-            </div>
+
         );
     }
 }
