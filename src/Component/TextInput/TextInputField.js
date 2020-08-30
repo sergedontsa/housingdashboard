@@ -2,18 +2,19 @@ import React from 'react';
 import TextField from "@material-ui/core/TextField";
 import {makeStyles} from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles= makeStyles(() => ({
     root:{
-        marginTop:30
+        margin:6
     }
 }))
-
 const TextInputField = ({label, type, value, disable}) => {
     const classes = useStyles()
     return (
-        <div className={classes.root}>
-            <TextField id={'standard-basic'} label={label} type={type} fullWidth={true} defaultValue={value} disabled={disable}/>
-        </div>
+
+            <TextField className={classes.root} id={'standard-basic'} label={label} type={type} fullWidth={true} defaultValue={value}
+                       disabled={disable}
+                       />
+
     );
 
 }

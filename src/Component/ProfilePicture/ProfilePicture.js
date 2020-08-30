@@ -11,12 +11,9 @@ import Button from "@material-ui/core/Button";
 import EditIcon from '@material-ui/icons/Edit';
 
 const useStyle = makeStyles(() =>({
-    root:{
-        maxWidth:345,
-        marginTop:20
-    },
+
     cardArea:{
-        borderBottom:'1px solid red',
+
         paddingBottom:0,
     },
     media:{
@@ -28,14 +25,16 @@ const useStyle = makeStyles(() =>({
 const ProfilePicture = () =>{
     const classes = useStyle()
 
+
+
         return (
             <div>
-                <Card className={classes.root} variant={'outlined'}>
+                <Card variant={'outlined'}>
                     <CardActionArea className={classes.cardArea}>
                         <CardMedia className={classes.media} component={"img"} alt={'MyAccount Picture'} image={profile} title={'Picture'}/>
                     </CardActionArea>
-                    <CardActions>
-                        <Button endIcon={<EditIcon/>} >Edit Profile</Button>
+                    <CardActions className={'action-area'}>
+                        <Button fullWidth={true} size={"large"} variant={"outlined"} color={"secondary"} endIcon={<EditIcon/>} >Edit Profile</Button>
                     </CardActions>
                 </Card>
             </div>

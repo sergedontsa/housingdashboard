@@ -11,6 +11,9 @@ import SchedulePage from "../../Page/Schedule/SchedulePage";
 import SubscriberPage from "../../Page/Subscriber/SubscriberPage";
 import TenantPage from "../../Page/Tenant/TenantPage";
 import MyAccountPage from "../../Page/MyAccount/MyAccountPage";
+import DashboardPage from "../../Page/Dashboard/DashboardPage";
+import MyProfilePage from "../../Page/Profile/MyProfilePage";
+import MailBoxPage from "../../Page/MailBox/MailBoxPage";
 
 class Content extends Component {
 
@@ -18,6 +21,7 @@ class Content extends Component {
         return (
 
                 <Switch>
+                    <Route exact={true} path={'/'} component={DashboardPage}/>
                     <Route exact={true} path={'/apartment'} component={ApartmentPage}/>
                     <Route exact={true} path={'/billing'} component={BillingPage}/>
                     <Route exact={true} path={'/complain'} component={ComplainPage}/>
@@ -28,6 +32,8 @@ class Content extends Component {
                     <Route exact={true} path={'/tenant'} component={TenantPage}/>
                     <Route exact={true} path={'/building'} component={BuildingPage}/>
                     <Route exact={true} path={'/account'} component={MyAccountPage}/>
+                    <Route exact={true} path={'/profile'} component={MyProfilePage}/>
+                    <Route exact={true} path={'/mailbox'} component={MailBoxPage}/>
                 </Switch>
 
         );

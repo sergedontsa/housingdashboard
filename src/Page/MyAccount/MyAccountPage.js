@@ -1,53 +1,57 @@
-import React from 'react';
-import {makeStyles} from "@material-ui/core/styles";
+import React, {Component} from 'react';
 import Grid from "@material-ui/core/Grid";
 import {Button, Divider} from "@material-ui/core";
 import ProfilePicture from "../../Component/ProfilePicture/ProfilePicture";
 import './MyAccountPage.js.style.scss'
 import TextInputField from "../../Component/TextInput/TextInputField";
 
-const useStyles = makeStyles((theme) => ({
+class  MyAccountPage extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            isFieldDisable: true
+        }
+    }
+     handleEditClick = (event) => {
+        event.preventDefault()
+        console.log('Edit button click')
+         this.setState({ isFieldDisable: false})
+    }
 
-    cardRoot:{
-        maxWidth:345,
-        marginTop:20
-    },
-    fieldRoot:{
-        paddingTop: '90px'
-    },
-    buttonContainer:{
-        display:'flex',
-        paddingTop:40
-   }
-}))
+    render() {
+        return (
+            <div>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={3}>
+                            <div className={'my-account-title'}>
+                                <p className={'title'}>My Account</p>
+                            </div>
 
+                        <ProfilePicture/>
 
-
-const MyAccountPage = () => {
-    const classes = useStyles();
-    return (
-        <div>
-            <Grid container spacing={2} alignItems={'stretch'} >
-                <Grid item xs={12} sm={3}>
-                    <h1>My Account</h1>
-                    <Divider/>
-                <ProfilePicture/>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                <div className={classes.fieldRoot}>
-                    <TextInputField label={'Username: '} type={'text'} value={'username@gmail.com'} disable={true}/>
-                    <TextInputField label={'Password: '} type={'password'} value={'password'} disable={true}/>
-                    <TextInputField label={'Role: '} type={'text'} value={'Role'} disable={true}/>
-                </div>
-                <div className={classes.buttonContainer}>
-                  <Button variant={'outlined'} color={'primary'} disableElevation={true}>Edit Credential</Button>
-                </div>
-            </Grid>
-            </Grid>
-        </div>
-
-
-    )
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <div className={'fieldRoot'}>
+                            <TextInputField label={'Username: '} type={'text'} value={'username@gmail.com'} disable={this.state.isFieldDisable}/>
+                            <TextInputField label={'Password: '} type={'password'} value={'password'} disable={this.state.isFieldDisable}/>
+                            <TextInputField label={'Role: '} type={'text'} value={'Role'} disable={true}/>
+                        </div>
+                        <div className={'buttonContainer'}>
+                            <div className={'button-1'}>
+                                <Button onClick={this.handleEditClick} variant={'outlined'} color={'primary'}>Edit Credential</Button>
+                            </div>
+                            <div className={'button-2'}>
+                                {
+                                    !this.state.isFieldDisable ? <Button  variant={'outlined'} color={'primary'}>Save Change</Button>: null
+                                }
+                            </div>
+                        </div>
+                    </Grid>
+                </Grid>
+                <Divider/>
+            </div>
+        )
+    }
 }
 export default MyAccountPage;
 

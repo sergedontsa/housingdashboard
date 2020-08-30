@@ -14,11 +14,33 @@ import ScheduleIcon from "@material-ui/icons/Schedule";
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import List from "@material-ui/core/List";
+import HomeIcon from '@material-ui/icons/Home';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Chip from "@material-ui/core/Chip";
+import {Avatar} from "@material-ui/core";
 
 class Menu extends Component {
     render() {
         return (
                 <List>
+                    <Link to={'/'} className={'option'}>
+                        <ListItem className={'list-item'}>
+                            <ListItemIcon><HomeIcon/></ListItemIcon>
+                            <ListItemText>Home</ListItemText>
+                        </ListItem>
+                    </Link>
+                    <Divider/>
+
+
+                    <Link to={'/mailbox'} className={'option'}>
+                        <ListItem className={'list-item'}>
+                            <ListItemIcon><MailOutlineIcon/></ListItemIcon>
+                            <ListItemText>MailBox  <Chip size={"small"} avatar={<Avatar>{5}</Avatar>} /> </ListItemText>
+                        </ListItem>
+                    </Link>
+                    <Divider/>
+
+
                     <Link className={'option'} to={'/apartment'}>
                         <ListItem className={'list-item'}>
                             <ListItemIcon><ApartmentIcon/></ListItemIcon>

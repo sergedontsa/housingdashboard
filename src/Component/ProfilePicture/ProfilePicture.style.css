@@ -1,3 +1,8 @@
-
+.action-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 45px;
+}
 
 /*# sourceMappingURL=ProfilePicture.style.css.map */
