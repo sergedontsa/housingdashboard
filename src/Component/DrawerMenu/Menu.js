@@ -25,91 +25,91 @@ class Menu extends Component {
                 <List>
                     <Link to={'/'} className={'option'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><HomeIcon/></ListItemIcon>
-                            <ListItemText>Home</ListItemText>
+                            <ListItemIcon><HomeIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Home</span></ListItemText>
                         </ListItem>
                     </Link>
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
 
                     <Link to={'/mailbox'} className={'option'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><MailOutlineIcon/></ListItemIcon>
-                            <ListItemText>MailBox  <Chip size={"small"} avatar={<Avatar>{5}</Avatar>} /> </ListItemText>
+                            <ListItemIcon><MailOutlineIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>MailBox</span>  <Chip size={"small"} avatar={<Avatar>{5}</Avatar>} /> </ListItemText>
                         </ListItem>
                     </Link>
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
 
                     <Link className={'option'} to={'/apartment'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><ApartmentIcon/></ListItemIcon>
-                            <ListItemText>Apartment</ListItemText>
+                            <ListItemIcon><ApartmentIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Apartment</span></ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/billing'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><MonetizationOnIcon/></ListItemIcon>
-                            <ListItemText>Billing</ListItemText>
+                            <ListItemIcon><MonetizationOnIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Billing</span> </ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/complain'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><AccountTreeIcon/></ListItemIcon>
-                            <ListItemText>Complain</ListItemText>
+                            <ListItemIcon><AccountTreeIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Complain</span> </ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/employee'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><AssignmentIndIcon/></ListItemIcon>
-                            <ListItemText>Employee</ListItemText>
+                            <ListItemIcon><AssignmentIndIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Employee</span> </ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/listening'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><RadioIcon/></ListItemIcon>
-                            <ListItemText>Listening</ListItemText>
+                            <ListItemIcon><RadioIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Listening</span> </ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/schedule'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><ScheduleIcon/></ListItemIcon>
-                            <ListItemText>Schedule</ListItemText>
+                            <ListItemIcon><ScheduleIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Schedule</span> </ListItemText>
                         </ListItem>
                     </Link>
 
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/subscriber'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><SubscriptionsIcon/></ListItemIcon>
-                            <ListItemText>Subscriber</ListItemText>
+                            <ListItemIcon><SubscriptionsIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Subscriber</span> </ListItemText>
                         </ListItem>
                     </Link>
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
 
                     <Link className={'option'} to={'/building'}>
                         <ListItem className={'list-item'}>
-                            <ListItemIcon><HomeWorkIcon/></ListItemIcon>
-                            <ListItemText>Building</ListItemText>
+                            <ListItemIcon><HomeWorkIcon style={{color:'#CCD2D4'}}/></ListItemIcon>
+                            <ListItemText><span className={'title'}>Building</span> </ListItemText>
                         </ListItem>
                     </Link>
-                    <Divider/>
+                    <Divider style={{backgroundColor:'#CCD2D4'}}/>
                 </List>
 
         );

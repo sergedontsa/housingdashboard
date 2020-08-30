@@ -17,9 +17,10 @@ import UserMenu from "./Component/NavBar/UserMenu";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import {Badge} from "@material-ui/core";
+import Box from "@material-ui/core/Box";
 
 
-const drawerWidth = 240;
+const drawerWidth = '20vh';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-      backgroundColor:'#CCD2D4',
       boxShadow:0,
-      color: 'black'
+      color: 'black',
+      borderBottom:'1px solid #283345'
     },
   },
   menuButton: {
@@ -51,6 +52,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: '#283345',
+    color:'white'
   },
   content: {
     flexGrow: 1,
@@ -87,7 +90,7 @@ function ResponsiveDrawer(props) {
   const drawer = (
       <div>
         <div className={classes.toolbar} />
-        <Divider />
+        <Divider style={{backgroundColor:'#CCD2D4'}} />
             <Menu/>
       </div>
   );
@@ -97,7 +100,7 @@ function ResponsiveDrawer(props) {
   return (
       <div className={classes.root}>
         <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar} elevation={0}>
+        <AppBar position="fixed" className={classes.appBar} color={"transparent"} elevation={0}>
           <Toolbar>
             <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} className={classes.menuButton}>
               <MenuIcon />
@@ -133,8 +136,10 @@ function ResponsiveDrawer(props) {
         </nav>
         <main className={classes.content}>
           <div className={classes.toolbar} />
+          <Box style={{}}>
 
                 <Content/>
+          </Box>
 
         </main>
       </div>

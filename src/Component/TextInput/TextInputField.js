@@ -7,11 +7,11 @@ const useStyles= makeStyles(() => ({
         margin:6
     }
 }))
-const TextInputField = ({label, type, value, disable}) => {
+const TextInputField = ({label, type, value, disable, variant}) => {
     const classes = useStyles()
     return (
 
-            <TextField className={classes.root} id={'standard-basic'} label={label} type={type} fullWidth={true} defaultValue={value}
+            <TextField variant={variant} className={classes.root} id={'standard-basic'} label={label} type={type} fullWidth={true} defaultValue={value}
                        disabled={disable}
                        />
 

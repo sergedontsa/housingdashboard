@@ -3,5 +3,10 @@
   color: black;
   font-weight: bold;
 }
+.option .list-item .title {
+  font-family: "Play", sans-serif;
+  font-size: 18px;
+  color: azure;
+}
 
 /*# sourceMappingURL=Menu.style.css.map */

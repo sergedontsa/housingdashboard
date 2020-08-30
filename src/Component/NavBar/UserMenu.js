@@ -31,13 +31,13 @@ const UserMenu =({anchorEl, handleClose}) => {
                         <ListItemText>My Account</ListItemText>
                     </ListItem>
                  </Link>
-
-
                  <Divider/>
-                 <ListItem button={true}>
-                     <ListItemIcon><ExitToAppIcon/></ListItemIcon>
-                     <ListItemText>Log out</ListItemText>
-                 </ListItem>
+                 <Link className={'option'} to={"/signInAndSignOut"}>
+                    <ListItem button={true}>
+                        <ListItemIcon><ExitToAppIcon/></ListItemIcon>
+                        <ListItemText>Log out</ListItemText>
+                    </ListItem>
+                 </Link>
 
              </List>
 

@@ -14,6 +14,9 @@ import MyAccountPage from "../../Page/MyAccount/MyAccountPage";
 import DashboardPage from "../../Page/Dashboard/DashboardPage";
 import MyProfilePage from "../../Page/Profile/MyProfilePage";
 import MailBoxPage from "../../Page/MailBox/MailBoxPage";
+import SignAndSignOutPage from "../../Page/SignAndSigOut/SignAndSignOutPage";
+import ForgotPasswordPage from "../../Page/ForgotPassword/ForgotPasswordPage";
+
 
 class Content extends Component {
 
@@ -34,6 +37,8 @@ class Content extends Component {
                     <Route exact={true} path={'/account'} component={MyAccountPage}/>
                     <Route exact={true} path={'/profile'} component={MyProfilePage}/>
                     <Route exact={true} path={'/mailbox'} component={MailBoxPage}/>
+                    <Route exact={true} path={'/signInAndSignOut'} component={SignAndSignOutPage}/>
+                    <Route exact={true} path={'/reset/password'} component={ForgotPasswordPage}/>
                 </Switch>
 
         );

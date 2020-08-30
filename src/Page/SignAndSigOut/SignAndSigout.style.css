@@ -1,0 +1,22 @@
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.root .right {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.root .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.root .left .inner-left {
+  height: 20vw;
+  background-color: azure;
+}
+
+/*# sourceMappingURL=SignAndSigout.style.css.map */
