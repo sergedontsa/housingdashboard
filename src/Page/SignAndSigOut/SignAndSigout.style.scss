@@ -1,35 +1,19 @@
-//.root{
-//  height: 100vh;
-//  display: flex;
-//  justify-content: flex-end;
-//
-//  .right{
-//    min-height: 100%;
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//  }
-//  .left{
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//
-//    .inner-left{
-//      height: 20vw;
-//      background-color: azure;
-//    }
-//  }
-//}
-
-.container{
-  height: 80vh;
+.root{
+  background-image: url("../../asset/house.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px dotted lightgrey;
 
 
-  .form-container{
-      width: 40vw;
+  .left{
+
+  }
+
+  .container {
+    flex: 0 0 100%;
   }
 }
+

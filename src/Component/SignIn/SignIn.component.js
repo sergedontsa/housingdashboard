@@ -11,6 +11,7 @@ import HttpsIcon from '@material-ui/icons/Https';
 import {Link} from "react-router-dom";
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
+
 class SignInComponent extends Component {
     constructor(props) {
         super(props);
@@ -21,8 +22,8 @@ class SignInComponent extends Component {
             passwordError: false,
             errorMessageUsername:'',
             errorMessagePassword:'',
-            usernameIconColor:"inherit",
-            passwordIconColor:"inherit"
+            usernameIconColor:"white",
+            passwordIconColor:"white"
         }
     }
 
@@ -56,10 +57,11 @@ class SignInComponent extends Component {
         this.setState({[name]: value})
 
     }
+
     render() {
         return (
-            <div className={'outer-container'}>
-                <Card className={'card-container'} variant={"outlined"}>
+
+                <Card className={'card-container'} style={{borderRadius:0}}>
                 <form onSubmit={this.handleSubmit}>
                     <CardContent>
                         <div className={'field-container'}>
@@ -110,7 +112,7 @@ class SignInComponent extends Component {
                     </CardActions>
                 </form>
                 </Card>
-            </div>
+
         );
     }
 }

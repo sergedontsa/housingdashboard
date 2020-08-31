@@ -1,12 +1,14 @@
-.container {
-  height: 80vh;
+.root {
+  background-image: url("../../asset/house.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px dotted lightgrey;
 }
-.container .form-container {
-  width: 40vw;
+.root .container {
+  flex: 0 0 100%;
 }
 
 /*# sourceMappingURL=SignAndSigout.style.css.map */

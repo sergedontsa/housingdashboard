@@ -56,8 +56,10 @@ const useStyles = makeStyles((theme) => ({
     color:'white'
   },
   content: {
-    flexGrow: 1,
+    flexGrow:1,
     padding: theme.spacing(2),
+    minHeight: '100vh'
+
 
   },
   typographyStyles:{
@@ -136,10 +138,8 @@ function ResponsiveDrawer(props) {
         </nav>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Box style={{}}>
+               <Content/>
 
-                <Content/>
-          </Box>
 
         </main>
       </div>
