@@ -20,7 +20,7 @@ import {Badge} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 
 
-const drawerWidth = '20vh';
+const drawerWidth = '250px';
 
 const useStyles = makeStyles((theme) => ({
   root: {

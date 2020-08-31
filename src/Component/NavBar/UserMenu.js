@@ -17,7 +17,7 @@ const UserMenu =({anchorEl, handleClose}) => {
          <Menu anchorEl={anchorEl} keepMounted={true} open={Boolean(anchorEl)} onClose={handleClose} PaperProps={{style:{height: '20vh', width:'25vh'}}}>
 
              <List component={'nav'}>
-                 <Link to={'/profile'} className={'option'}>
+                 <Link to={'/profile'} className={'option'} onClick={handleClose}>
                     <ListItem button={true}>
                         <ListItemIcon><AccountCircleIcon/></ListItemIcon>
                         <ListItemText>Profile</ListItemText>
@@ -25,14 +25,14 @@ const UserMenu =({anchorEl, handleClose}) => {
                  </Link>
                  <Divider/>
 
-                 <Link to={"/account"} className={'option'}>
+                 <Link to={"/account"} className={'option'} onClick={handleClose}>
                     <ListItem button={true}>
                         <ListItemIcon><PermContactCalendarIcon/></ListItemIcon>
                         <ListItemText>My Account</ListItemText>
                     </ListItem>
                  </Link>
                  <Divider/>
-                 <Link className={'option'} to={"/signInAndSignOut"}>
+                 <Link className={'option'} to={"/signInAndSignOut"} onClick={handleClose}>
                     <ListItem button={true}>
                         <ListItemIcon><ExitToAppIcon/></ListItemIcon>
                         <ListItemText>Log out</ListItemText>
