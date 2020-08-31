@@ -59,7 +59,7 @@ class SignInComponent extends Component {
     render() {
         return (
             <div className={'outer-container'}>
-                <Card className={'card-container'} elevation={10} variant={"outlined"}>
+                <Card className={'card-container'} variant={"outlined"}>
                 <form onSubmit={this.handleSubmit}>
                     <CardContent>
                         <div className={'field-container'}>
