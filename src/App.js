@@ -17,7 +17,7 @@ import UserMenu from "./Component/NavBar/UserMenu";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import {Badge} from "@material-ui/core";
-import Box from "@material-ui/core/Box";
+
 
 
 const drawerWidth = '250px';
@@ -58,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow:1,
     padding: theme.spacing(2),
-    minHeight: '100vh'
+    minHeight: '100vh',
+
 
 
   },

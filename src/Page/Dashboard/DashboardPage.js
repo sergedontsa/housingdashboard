@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Dashbard.style.scss'
+import DoughnutChart from "../../Chart/DoughnutChart";
 
 
 class DashboardPage extends Component {
@@ -7,6 +8,7 @@ class DashboardPage extends Component {
         return (
             <div>
                 <h1>Dashboard Page</h1>
+                <DoughnutChart/>
             </div>
         );
     }
